@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Api Exam</title>
+</head>
+
+
+<body>
+  <section id="loading" class="d-flex justify-content-center align-items-center">
+    <i class="fas fa-spinner text-white fa-3x fa-spin"></i>
+  </section>
+  <div class="sideBar d-flex flex-column justify-content-between">
+    <div class="sideBox  d-flex flex-column align-items-center bg-black">
+      <a class="m-3 text-decoration-none text-white" id="search">Search</a>
+      <a class="m-3 text-decoration-none text-white" id="categories">Categories</a>
+      <a class="m-3 text-decoration-none text-white" id="area">Area</a>
+      <a class="m-3 text-decoration-none text-white" id="ing">ingridients</a>
+      <a class="m-3 text-decoration-none text-white" id="reg">Contact Us</a>
+      <div class="nav-social-item bg-black text-center">
+        <i class="fa-brands fa-facebook-f text-warning"></i>
+        <i class="fab fa-twitter text-warning"></i>
+        <i class="fas fa-globe text-warning"></i>
+        <div class="pt-3">
+          <span class="text-warning">Copyright Â© 2019 All Rights Reserved.</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="bg-white d-flex flex-column justify-content-between align-items-center open  py-3">
+    <img src="img/logo.png" class="pic" alt="">
+    <div class="toggler">
+      <i class="fa fa-align-justify"></i>
+    </div>
+    <div class="strip-social-icon">
+      <div class="strip-lang">
+        <span>
+          <i class="fas fa-globe"></i>
+        </span>
+      </div>
+      <div class="strip-share">
+        <span>
+          <i class="fas fa-share-alt"></i>
+        </span>
+      </div>
+    </div>
+
+  </div>
+  <section class="searchInput">
+    <div class="container input">
+      <div class="row search ">
+        <div class="col-md-6">
+          <input type="text" maxlength="1" placeholder="Get Meals By first letter..."
+            class="bg-transparent text-white w-100 text-center form-control border-0 border-bottom rounded-0 my-5"
+            id="search" oninput="getMealsByLetter(this.value)">
+        </div>
+        <div class="col-md-6"><input oninput="getMealsByName(this.value)" type="text" placeholder="Get meals by name..."
+            class="bg-transparent text-white w-100 text-center form-control border-0 border-bottom rounded-0 my-5">
+        </div>
+      </div>
+      <div class="row p-5 mealsContainer">
+      </div>
+    </div>
+  </section>
+
+
+  <section class="contact">
+    <div class="container p-5 text-center">
+      <h2 class="m-4 text-white">Contact Us...</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <input type="text" id="userName" placeholder="Enter your name" class="bg-transparent w-100 text-center p-3">
+          <h5 id="warningName" class="text-black p-4"></h5>
+          <input type="text" id="Phone" placeholder="Enter Phone number" class="bg-transparent w-100 text-center p-3">
+          <h5 id="warningPhone" class="text-black p-4"></h5>
+          <input type="password" id="password" placeholder="Enter Password"
+            class="bg-transparent w-100 text-center p-3">
+          <h5 id="warningPassword" class="text-black p-4"></h5>
+        </div>
+        <div class="col-md-6">
+          <input type="email" id="email" placeholder="Enter mail" class="bg-transparent w-100 text-center p-3">
+          <h5 id="warningMail" class="text-black p-4"></h5>
+          <input type="number" id="age" placeholder="Enter age" class="bg-transparent w-100 text-center p-3">
+          <h5 id="warningAge" class="text-black p-4"></h5>
+          <input type="password" id="rePass" placeholder="Retype password" class="bg-transparent w-100 text-center p-3">
+          <h5 id="warningRepass" class="text-black p-4"></h5>
+        </div>
+      </div>
+      <button id='disBtn' class="btn btn-outline-danger disabled my-4">Submit</button>
+    </div>
+  </section>
+
+
+  <script src="js/jquery-3.6.1.min.js"></script>
+  <script src="js/all.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
